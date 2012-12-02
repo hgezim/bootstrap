@@ -136,7 +136,7 @@ $("#myModal").modal('show')                // initializes and invokes show immed
 
           <h3>Events</h3>
           <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and its past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
-          <p>All infinitive events provide preventDefault functionality. This provides the abililty to stop the execution of an action before it starts.</p>
+          <p>All infinitive events provide preventDefault functionality. This provides the ability to stop the execution of an action before it starts.</p>
 <pre class="prettyprint linenums">
 $('#myModal').on('show', function (e) {
     if (!data) return e.preventDefault() // stops modal from being shown
@@ -181,7 +181,7 @@ $('#myModal').on('show', function (e) {
           <h3>Static example</h3>
           <p>A rendered modal with header, body, and set of actions in the footer.</p>
           <div class="bs-docs-example" style="background-color: #f5f5f5;">
-            <div class="modal" style="position: relative; top: auto; left: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
               <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 <h3>Modal header</h3>
@@ -507,7 +507,47 @@ $('#myModal').on('hidden', function () {
 
           <h3>Methods</h3>
           <h4>$().dropdown('toggle')</h4>
+<<<<<<< HEAD
           <p>A programatic api for toggling menus for a given navbar or tabbed navigation.</p>
+
+          <h3>Events</h3>
+          <p>The dropdown class exposes a few events for hooking into its functionality.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">Event</th>
+               <th>Description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>open</td>
+               <td>This event fires just before the dropdown is opened. The event's <code>preventDefault()</code> method may be used to prevent the dropdown from opening.</td>
+             </tr>
+             <tr>
+               <td>opened</td>
+               <td>This event is fired once the dropdown is open and visible to the user.</td>
+             </tr>
+             <tr>
+               <td>close</td>
+               <td>This event fires just before a dropdown is about to be closed. The event's <code>preventDefault()</code> method may be used to prevent the dropdown from closing.</td>
+             </tr>
+             <tr>
+               <td>closed</td>
+               <td>This event is fired when the dropdown has closed.</td>
+             </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
+$('#dLabel').on('open', function (e) {
+  // do something…
+  // e.preventDefault() // Prevent menu from opening
+})
+</pre>
+
+=======
+          <p>A programmatic api for toggling menus for a given navbar or tabbed navigation.</p>
+>>>>>>> remotes/origin/2.2.2-wip
         </section>
 
 
@@ -636,7 +676,7 @@ $('[data-spy="scroll"]').each(function () {
 
 
           <h2>Example tabs</h2>
-          <p>Add quick, dynamic tab functionality to transiton through panes of local content, even via dropdown menus.</p>
+          <p>Add quick, dynamic tab functionality to transition through panes of local content, even via dropdown menus.</p>
           <div class="bs-docs-example">
             <ul id="myTab" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
@@ -1687,7 +1727,7 @@ $('[data-spy="affix"]').each(function () {
                <td>offset</td>
                <td>number | function | object</td>
                <td>10</td>
-               <td>Pixels to offset from screen when calculating position of scroll. If a single number is provide, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provided an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).</td>
+               <td>Pixels to offset from screen when calculating position of scroll. If a single number is provided, the offset will be applied in both top and left directions. To listen for a single direction, or multiple unique offsets, just provide an object <code>offset: { x: 10 }</code>. Use a function when you need to dynamically provide an offset (useful for some responsive designs).</td>
              </tr>
             </tbody>
           </table>
